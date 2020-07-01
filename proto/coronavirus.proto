@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = ".;coronavirus";
+
+
+package coronavirus;
+
+// The greeting service definition.
+service DatosCoronarirus {
+  // Sends a greeting
+  rpc Datos (Request) returns (Reply) {}
+}
+
+// Es cliente manda los datos.
+message Request {
+  string datoscorona = 1;
+}
+
+// The response message containing the greetings
+message Reply {
+  string confirmacion = 1;
+}
+
