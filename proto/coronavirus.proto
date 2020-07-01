@@ -5,18 +5,18 @@ option go_package = ".;coronavirus";
 
 package coronavirus;
 
-// The greeting service definition.
+// The service definition.
 service DatosCoronarirus {
-  // Sends a greeting
+  // Sends a data
   rpc Datos (Request) returns (Reply) {}
 }
 
-// Es cliente manda los datos.
+// Es cliente manda los datos
 message Request {
   string datoscorona = 1;
 }
 
-// The response message containing the greetings
+// The response 
 message Reply {
   string confirmacion = 1;
 }
