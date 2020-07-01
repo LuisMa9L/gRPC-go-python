@@ -1,15 +1,23 @@
 kubectl get nodes
 
-kubectl create deployment servidor --image=ubuntu
+//crear despliegue
+kubectl create deployment servidor --image=nginx
 
 kubectl get pods
 
-kubectl expose deployment servidor --type=LoadBalancer --port=3005
+//para borrar 
+//kubectl delete deploy/simple-deployment svc/simple-service
+
+//exponer y crear sercio 
+kubectl expose deployment servidor-go-1 --type=LoadBalancer --port=3001
+kubectl expose deployment servidor-go-2 --type=LoadBalancer --port=3002
+kubectl expose deployment servidor-py-1 --type=LoadBalancer --port=3001
+kubectl expose deployment servidor-py-2 --type=LoadBalancer --port=3002
 kubectl get services
 
 kubectl get pods
 
-kubectl exec -it servidorz-5b4c954b84-c9qzr /bin/bash
+kubectl exec -it pod /bin/bash
 
 kubectl scale deployment --replicas=3 servidor
      
@@ -51,6 +59,6 @@ kubectl scale deployment --replicas=3 servidor
    36  virtualenv -p python3.6 /tmp/country
    37  virtualenv -p python /tmp/country
    38  virtualenv -p python3 /tmp/country
-   39  source /tmp/country/bin/activate
+   39  source /tmp/corona/bin/activate
    40  pip install grpcio grpcio-tools
    41  pip freeze   

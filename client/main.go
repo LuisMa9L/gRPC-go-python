@@ -31,7 +31,7 @@ import (
 )
 
 const (
-	address     = "34.67.85.0:3000"
+	address     = "34.67.85.0:3001"
 	defaultName = "{datos coronavirus}"
 )
 
@@ -55,5 +55,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not greet (No Confirmacion): %v", err)
 	}
-	log.Printf("Datos corona confirmacion: %s", r.GetConfirmacion())
+	log.Printf("Respusta del servidor: %s", r.GetConfirmacion())
 }
