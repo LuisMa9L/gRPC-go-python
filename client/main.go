@@ -31,8 +31,8 @@ import (
 )
 
 const (
-	address     = "localhost:3000"
-	defaultName = "{hombre corona XD}"
+	address     = "34.67.85.0:3001"
+	defaultName = "{datos coronavirus}"
 )
 
 func main() {
@@ -47,7 +47,7 @@ func main() {
 	// Contact the server and print out its response.
 	name := defaultName
 	if len(os.Args) > 1 {
-		name = os.Args[1] + "jajajajajajaja"
+		name = os.Args[1]
 	}
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
@@ -55,5 +55,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not greet (No Confirmacion): %v", err)
 	}
-	log.Printf("Datos corona confirmacion: %s", r.GetConfirmacion())
+	log.Printf("Respusta del servidor: %s", r.GetConfirmacion())
 }
