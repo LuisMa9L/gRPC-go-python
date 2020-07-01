@@ -31,8 +31,8 @@ import (
 )
 
 const (
-	address     = "localhost:3000"
-	defaultName = "{hombre corona XD}"
+	address     = "34.67.85.0:3000"
+	defaultName = "{datos coronavirus}"
 )
 
 func main() {
@@ -47,7 +47,7 @@ func main() {
 	// Contact the server and print out its response.
 	name := defaultName
 	if len(os.Args) > 1 {
-		name = os.Args[1] + "jajajajajajaja"
+		name = os.Args[1]
 	}
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
