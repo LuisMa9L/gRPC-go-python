@@ -31,7 +31,7 @@ import (
 )
 
 const (
-	address     = "34.67.85.0:3001"
+	address     = "34.70.238.234:3000"
 	defaultName = "{datos coronavirus}"
 )
 
