@@ -10,14 +10,16 @@ kubectl get pods
 
 //exponer y crear sercio 
 kubectl expose deployment servidor-go-1 --type=LoadBalancer --port=3001
-kubectl expose deployment servidor-go-2 --type=LoadBalancer --port=3002
+kubectl expose deployment servidor-go-2 --type=LoadBalancer --port=3001
 kubectl expose deployment servidor-py-1 --type=LoadBalancer --port=3001
-kubectl expose deployment servidor-py-2 --type=LoadBalancer --port=3002
+kubectl expose deployment servidor-py-2 --type=LoadBalancer --port=3001
+kubectl expose deployment nginx-lb --type=LoadBalancer --port=3001
 kubectl get services
 
 kubectl get pods
 
-kubectl exec -it pod /bin/bash
+//entrar al contenedor  
+kubectl exec -it pod -- /bin/bash
 
 kubectl scale deployment --replicas=3 servidor
      
